@@ -1,0 +1,368 @@
+body{
+  background: black;
+  font-family: 'Courier';
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+  /* height: 100%; */
+}
+
+#content{
+  width: 80%;
+  margin-left: auto;margin-right: auto;
+  /* margin-top: 70px; */
+}
+
+canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+}
+
+
+#changelog{
+  position: absolute;
+  width: 500px;
+  right: 7%;
+  top: 70px;
+  padding: 15px;
+  border-radius: 15px;
+  color: white;
+  height: 300px;
+
+  background: -moz-linear-gradient(top, rgba(255,47,10,1) 0%, rgba(20,2,0,0.7) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,47,10,0.7)), color-stop(100%, rgba(20,2,0,1)));
+  background: -webkit-linear-gradient(top, rgba(255,47,10,0.7) 0%, rgba(20,2,0,0.7) 100%);
+  background: -o-linear-gradient(top, rgba(255,47,10,0.7) 0%, rgba(20,2,0,0.7) 100%);
+  background: -ms-linear-gradient(top, rgba(255,47,10,0.7) 0%, rgba(20,2,0,0.7) 100%);
+  background: linear-gradient(to bottom, rgba(255,47,10,0.7) 0%, rgba(20,2,0,0.7) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2f0a', endColorstr='#140200', GradientType=0 );
+}
+
+#changelog h2{
+  text-align: center;
+  font-family: Courier;
+}
+
+#changelog textarea{
+  width: 100%;
+  resize: none;
+  height: 150px;
+  background: transparent;
+  font-family: Courier;
+  font-size: 16px;
+  color: white;
+}
+
+
+
+#victims{
+  background: rgba(0,0,0,0.5);
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  right: 7%;
+  top: 390px;
+  border-radius: 15px;
+}
+
+#victims h3{
+  color: white;
+  text-align: center;
+  margin: 10px;
+  font-family: Courier;
+}
+
+#victims-items{
+  width: 100%;
+  height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#v-item{
+  display: inline-block;
+  width: calc(90%/3);
+  text-align: center;
+  color: red;
+  margin: 5px;
+}
+
+#v-item img{
+  border-radius: 50%;
+  border: 3px solid red;
+}
+
+
+
+
+
+
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: rgba(255,0,0,0.6); /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================== CPANEL ======================= */
+
+#navbar{
+  width: 100%;
+  background: rgba(160,0,0,0.6);
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid rgba(255,0,0,0.3);
+}
+
+
+#cpanel{
+  width: 600px;
+  height: 550px;
+  background: rgba(165,0,0,0.6);
+  position: absolute;
+  color: white;
+  left: 20px;
+  top: 80px;
+  border-radius: 15px;
+}
+
+#cpanel h2{
+  text-align: center;
+  font-family: Courier;
+  color: rgba(255,255,255,0.9);
+}
+
+#cpanel-item{
+  width: 40%;/*calc(90%/3);*/
+  text-align: center;
+  margin-top: 25px;
+  font-size: 70px;
+  text-shadow: 0px 6px 5px rgba(0,0,0,0.73);
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+#cpanel-item-container{
+  width: 100%;
+}
+
+#cpanel-item-caption{
+  display: block;
+  font-size: 20px;
+}
+
+#cpanel-item-right, #cpanel-item-left{
+  width: 49%;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+}
+
+#navbar-logout{
+  position: absolute;
+  right: 30px;
+  top: 5px;
+}
+
+#user-info{
+  font-family: Courier;
+  color: white;
+  cursor: pointer;
+}
+
+#user-info img{
+  border: 2px solid red;
+  border-radius: 15px;
+}
+
+#navbar-logout a{
+  font-family: Courier;
+  color: white;
+}
+
+#navbar-minilogo{
+  position: absolute;
+  left: 20px;
+  color: white;
+  font-size: 35px;
+  top: 0px;
+  cursor: pointer;
+}
+
+#navbar-minilogo i{
+  -webkit-text-fill-color: #d69355; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+#navbar-mininame{
+  font-family: Courier;
+}
+
+#stolen-data{
+  width: 100%;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  overflow-y: scroll;
+}
+
+#stolen-data::-webkit-scrollbar-button{ display: none; height: 13px; border-radius: 0px; background-color: #AAA; }
+#stolen-data::-webkit-scrollbar-button:hover{ background-color: #AAA; }
+#stolen-data::-webkit-scrollbar-thumb{ background-color: #ff0000; border-radius: 15px; }
+#stolen-data::-webkit-scrollbar-thumb:hover{ background-color: #800000; }
+#stolen-data::-webkit-scrollbar-track{ background-color: transparent; }
+#stolen-data::-webkit-scrollbar-track:hover{ background-color: transparent; }
+#stolen-data::-webkit-scrollbar{ width: 13px; }
+
+#stolen-data-credentials{
+  color: black;
+  font-family: Courier;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+
+
+#stolen_item{
+  border-radius: 0px 15px 15px 15px;
+  background: rgba(255,0,0,0.8);
+  margin-bottom: 20px;
+  padding: 15px;
+  color: rgba(255,255,255,0.9);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#installation-guide{
+  width: 100%;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  overflow-y: scroll;
+}
+
+#installation-guide::-webkit-scrollbar-button{ display: none; height: 13px; border-radius: 0px; background-color: #AAA; }
+#installation-guide::-webkit-scrollbar-button:hover{ background-color: #AAA; }
+#installation-guide::-webkit-scrollbar-thumb{ background-color: #ff0000; border-radius: 15px; }
+#installation-guide::-webkit-scrollbar-thumb:hover{ background-color: #800000; }
+#installation-guide::-webkit-scrollbar-track{ background-color: transparent; }
+#installation-guide::-webkit-scrollbar-track:hover{ background-color: transparent; }
+#installation-guide::-webkit-scrollbar{ width: 13px; }
+
+#installation-guide h2{
+  text-align: center;
+  color: white;
+}
+
+#installation-step{
+  width: 100%;
+  background: rgba(255,0,0,0.9);
+  padding: 15px;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,0.9);
+}
+
+#installation-step h4{
+  color: white;
+  -webkit-text-fill-color: black; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  margin-bottom: 15px;
+}
+
+#installation-step a{
+  color: rgba(255,255,255,0.9);
+  text-decoration: underline;
+}
+
+
+.login100-form-logo i{
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #900;
+}

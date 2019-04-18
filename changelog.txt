@@ -1,0 +1,4 @@
+18-04-2019 ,Working on the documentation.
+18-04-2019 ,Added support for F4C3B00K.
+17-04-2019 ,Implemented 'Recent victims' on login screen.
+15-04-2019 ,Finishing UI for the script.
