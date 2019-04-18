@@ -21,7 +21,7 @@ header('Content-Type: application/javascript');
 ?>
 // ==UserScript==
 // @name         Facebook Reader
-// @namespace    kitkat-service.000webhost.com
+// @namespace    never stays the same fkn host
 // @version      1.0
 // @description  A first script made for testing
 // @author       k3lly.dev
