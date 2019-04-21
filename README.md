@@ -1,6 +1,6 @@
 # bitten-c00kie documentation.
 
-The main purpose of this web application is to mantain a strict line between users and their own security around the websites they visit, the extensions they install and TO PROVE THEM how it can put in risk their online-credentials.
+The main purpose of this web application is to mantain a strict line between users and their own security around the websites they visit, the extensions they install and TO PROVE THEM how it can put in risk their online-credentials and sensitive information such as passwords.
 
 ##### Disclaimer
 > This application is only for educational purposes and should not be used to harm any real user data. I am not responsible for any misuse of the application itself.
